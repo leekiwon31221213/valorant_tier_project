@@ -29,34 +29,86 @@
       </div>
 
       <footer>
-        <p class="copyright">© XENON</p>
+        <div class="footer__inner">
+          <p class="copyright">© XENON</p>
 
-        <dl>
-          <dt>발로란트 티어 맞추기 웹사이트</dt>
-          <dd>“발티맞”</dd>
-        </dl>
+          <dl>
+            <dt>발로란트 티어 맞추기 웹사이트</dt>
+            <dd>“발티맞”</dd>
+          </dl>
+        </div>
       </footer>
     </div>
 
     <!-- 시작하기 모달 -->
-    <div class="terms-modal-container modal-common">
-      <div class="modal__inner">
-        <div class="modal-header"></div>
-      </div>
+    <div class="start-modal-container modal-common">
+      <ul class="modal__inner">
+        <li class="modal-header">
+          <div class="close-box"><i class="fa-solid fa-xmark close"></i></div>
+          <h1>발로란트 티어 맞추기</h1>
+
+          <div class="clip-report-btn-box"><button type="button">클립 신고</button></div>
+        </li>
+
+        <div class="modal-body">
+          <div class="white-box"></div>
+          <ul class="img-box">
+            <li><img src="./img/tier1.svg" alt="아이언" /></li>
+            <li><img src="./img/tier2.svg" alt="브론즈" /></li>
+            <li><img src="./img/tier3.svg" alt="실버" /></li>
+            <li><img src="./img/tier4.svg" alt="골드" /></li>
+            <li><img src="./img/tier5.svg" alt="플래티넘" /></li>
+            <li><img src="./img/tier6.svg" alt="다이아몬드" /></li>
+            <li><img src="./img/tier7.svg" alt="초월자" /></li>
+            <li><img src="./img/tier8.svg" alt="불멸" /></li>
+            <li><img src="./img/tier9.svg" alt="레디언트" /></li>
+          </ul>
+        </div>
+      </ul>
+    </div>
+
+    <!-- 신고모달 -->
+    <div class="report-modal-container modal-common">
+      <ul class="modal__inner">
+        <li class="modal-header">
+          <div class="close-box"><i class="fa-solid fa-xmark close"></i></div>
+          <h1>클립 신고</h1>
+        </li>
+
+        <li class="modal-body">
+          <div class="white-box"></div>
+
+          <ul class="report-history-box">
+            <li class="video-length-box history__inner">
+              <p>--:--</p>
+              <p>영상길이</p>
+            </li>
+            <li class="channel-name-box history__inner">
+              <p>--</p>
+              <p>채널이름</p>
+            </li>
+            <li class="delete-btn-box history__inner">
+              <button type="button">삭제 요청하기</button>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
     <!-- // -->
 
     <!-- 클립 업로드 모달  -->
-    <div class="certified-modal-container modal-common">
+    <!-- <div class="certified-modal-container modal-common">
       <div class="modal__inner">
         <i class="fa-solid fa-xmark close"></i>
       </div>
-    </div>
+    </div> -->
 
     <!-- // -->
 
     <!-- 저장완료 모달 -->
 
     <!-- // -->
+    <script src="./js/start.js"></script>
+    <script src="./js/clip.js"></script>
   </body>
 </html>

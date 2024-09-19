@@ -93,18 +93,25 @@ button {
   }
 
   footer {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
+
     align-items: center;
     height: 120px;
-
-    dl {
-      color: #ffffff80;
-      dd {
-        margin-top: 10px;
-        text-align: right;
+    border-top: 1px solid #ffffff36;
+    .footer__inner {
+      width: 90%;
+      margin: 0 auto;
+      dl {
+        color: #ffffff80;
+        dt,
+        dd {
+          text-align: right;
+        }
+        dd {
+          margin-top: 10px;
+        }
       }
     }
   }
@@ -112,7 +119,7 @@ button {
 
 /* 모달공통 */
 .modal-common {
-  visibility: hidden;
+  // visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -123,7 +130,7 @@ button {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  opacity: 0;
+  // opacity: 0;
   transition: 0.4s;
   color: #fff;
   overflow-y: scroll;
@@ -136,20 +143,64 @@ button {
   .modal__inner {
     padding: 20px;
     width: 90%;
-    height: 700px;
     .modal-header {
       display: flex;
-      justify-content: space-between;
-      h2 {
-        color: #fff;
-        margin-bottom: 20px;
-        font-size: 2rem;
+      flex-direction: column;
+      width: clamp(795px, 77.561vw, 960px);
+      margin: 0 auto;
+
+      .close-box {
+        position: relative;
+      }
+      h1 {
+        @include h-style(clamp(2.5rem, 2.439vw, 2.8rem));
+        text-align: center;
+        margin-bottom: 30px;
         font-weight: $font-blod;
       }
       i {
-        color: #fff;
+        position: absolute;
+        top: -50px;
+        right: 0;
+        margin-bottom: 20px;
         font-size: 2.5rem;
         cursor: pointer;
+      }
+      .clip-report-btn-box {
+        text-align: right;
+        button {
+          margin-bottom: 15px;
+          width: 80px;
+          height: 40px;
+          line-height: 40px;
+          background-color: red;
+          border-radius: $border-radius;
+        }
+      }
+    }
+
+    .modal-body {
+      .white-box {
+        width: 90%;
+        max-width: 960px;
+        height: 480px;
+        margin: 0 auto;
+        background-color: #fff;
+        border-radius: $border-radius;
+      }
+      .img-box {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        @for $i from 1 through 8 {
+          li:nth-child(#{$i}) {
+            margin-right: 10px;
+          }
+        }
+        li > img {
+          width: 100%;
+          max-width: 70px;
+        }
       }
     }
 
@@ -157,12 +208,37 @@ button {
   }
 }
 
-/* 인증 클릭후 팝업 */
-.certified-modal-container {
-  .modal__inner {
+//신고 모달
+.report-modal-container {
+  .report-history-box {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+    border-radius: $border-radius;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+
+    .history__inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+      border-radius: $border-radius;
+
+      &.video-length-box,
+      &.channel-name-box {
+        background-color: #4b4f58;
+        width: 140px;
+        height: 145px;
+      }
+
+      &.delete-btn-box {
+        background-color: #656565;
+        height: 50px;
+        width: 150px;
+      }
+    }
   }
 }

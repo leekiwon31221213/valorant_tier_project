@@ -71,24 +71,30 @@ button {
   border-radius: 8px;
 }
 #wrap footer {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
   align-items: center;
   height: 120px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2117647059);
 }
-#wrap footer dl {
+#wrap footer .footer__inner {
+  width: 90%;
+  margin: 0 auto;
+}
+#wrap footer .footer__inner dl {
   color: rgba(255, 255, 255, 0.5019607843);
 }
-#wrap footer dl dd {
-  margin-top: 10px;
+#wrap footer .footer__inner dl dt,
+#wrap footer .footer__inner dl dd {
   text-align: right;
+}
+#wrap footer .footer__inner dl dd {
+  margin-top: 10px;
 }
 
 /* 모달공통 */
 .modal-common {
-  visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -99,7 +105,6 @@ button {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  opacity: 0;
   transition: 0.4s;
   color: #fff;
   overflow-y: scroll;
@@ -111,29 +116,108 @@ button {
 .modal-common .modal__inner {
   padding: 20px;
   width: 90%;
-  height: 700px;
   /* // */
 }
 .modal-common .modal__inner .modal-header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  width: clamp(795px, 77.561vw, 960px);
+  margin: 0 auto;
 }
-.modal-common .modal__inner .modal-header h2 {
-  color: #fff;
-  margin-bottom: 20px;
-  font-size: 2rem;
+.modal-common .modal__inner .modal-header .close-box {
+  position: relative;
+}
+.modal-common .modal__inner .modal-header h1 {
+  font-size: clamp(2.5rem, 2.439vw, 2.8rem);
+  text-align: center;
+  margin-bottom: 30px;
   font-weight: 600;
 }
 .modal-common .modal__inner .modal-header i {
-  color: #fff;
+  position: absolute;
+  top: -50px;
+  right: 0;
+  margin-bottom: 20px;
   font-size: 2.5rem;
   cursor: pointer;
 }
-
-/* 인증 클릭후 팝업 */
-.certified-modal-container .modal__inner {
+.modal-common .modal__inner .modal-header .clip-report-btn-box {
+  text-align: right;
+}
+.modal-common .modal__inner .modal-header .clip-report-btn-box button {
+  margin-bottom: 15px;
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  background-color: red;
+  border-radius: 8px;
+}
+.modal-common .modal__inner .modal-body .white-box {
+  width: 90%;
+  max-width: 960px;
+  height: 480px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.modal-common .modal__inner .modal-body .img-box {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  margin-top: 30px;
+}
+.modal-common .modal__inner .modal-body .img-box li:nth-child(1) {
+  margin-right: 10px;
+}
+.modal-common .modal__inner .modal-body .img-box li:nth-child(2) {
+  margin-right: 10px;
+}
+.modal-common .modal__inner .modal-body .img-box li:nth-child(3) {
+  margin-right: 10px;
+}
+.modal-common .modal__inner .modal-body .img-box li:nth-child(4) {
+  margin-right: 10px;
+}
+.modal-common .modal__inner .modal-body .img-box li:nth-child(5) {
+  margin-right: 10px;
+}
+.modal-common .modal__inner .modal-body .img-box li:nth-child(6) {
+  margin-right: 10px;
+}
+.modal-common .modal__inner .modal-body .img-box li:nth-child(7) {
+  margin-right: 10px;
+}
+.modal-common .modal__inner .modal-body .img-box li:nth-child(8) {
+  margin-right: 10px;
+}
+.modal-common .modal__inner .modal-body .img-box li > img {
+  width: 100%;
+  max-width: 70px;
+}
+
+.report-modal-container .report-history-box {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
+}
+.report-modal-container .report-history-box .history__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  border-radius: 8px;
+}
+.report-modal-container .report-history-box .history__inner.video-length-box, .report-modal-container .report-history-box .history__inner.channel-name-box {
+  background-color: #4b4f58;
+  width: 140px;
+  height: 145px;
+}
+.report-modal-container .report-history-box .history__inner.delete-btn-box {
+  background-color: #656565;
+  height: 50px;
+  width: 150px;
 }
