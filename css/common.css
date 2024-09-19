@@ -1,0 +1,139 @@
+@charset "UTF-8";
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 8px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  width: 100%;
+  height: 100%;
+  background-color: #141517;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+body,
+button {
+  color: #fff;
+}
+
+#wrap .header {
+  width: 100%;
+  height: 60px;
+  line-height: 50px;
+  background-color: rgba(0, 0, 0, 0.6117647059);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2117647059);
+}
+#wrap .main-contents .contents__inner {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#wrap .main-contents .contents__inner h1 {
+  font-size: clamp(2.5rem, 2.439vw, 2.8rem);
+  margin-bottom: 130px;
+}
+#wrap .main-contents .contents__inner .btn-box {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+#wrap .main-contents .contents__inner .btn-box button {
+  font-size: 1.6rem;
+}
+#wrap .main-contents .contents__inner .btn-box .start-btn {
+  width: 100%;
+  height: 50px;
+  background-color: #00ffa3;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+#wrap .main-contents .contents__inner .btn-box .clip-btn {
+  width: 100%;
+  height: 50px;
+  background-color: #373a3f;
+  color: #fff;
+  border-radius: 8px;
+}
+#wrap footer {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+  height: 120px;
+}
+#wrap footer dl {
+  color: rgba(255, 255, 255, 0.5019607843);
+}
+#wrap footer dl dd {
+  margin-top: 10px;
+  text-align: right;
+}
+
+/* 모달공통 */
+.modal-common {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: 0.4s;
+  color: #fff;
+  overflow-y: scroll;
+}
+.modal-common.active {
+  visibility: visible;
+  opacity: 1;
+}
+.modal-common .modal__inner {
+  padding: 20px;
+  width: 90%;
+  height: 700px;
+  /* // */
+}
+.modal-common .modal__inner .modal-header {
+  display: flex;
+  justify-content: space-between;
+}
+.modal-common .modal__inner .modal-header h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.modal-common .modal__inner .modal-header i {
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+/* 인증 클릭후 팝업 */
+.certified-modal-container .modal__inner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
